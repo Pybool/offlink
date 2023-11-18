@@ -19,7 +19,7 @@ const useTransactionReleased = (transaction: Transaction) => {
   useEffect(() => {
     const transactionStatePolling = setInterval(async () => {
       try {
-        if (await isTransactionReleased(transaction.id)) {
+        if (await isTransactionReleased(transaction?.orderId?.toString() ?? "0")) {
           setReleased(true);
         }
       } catch (error) {

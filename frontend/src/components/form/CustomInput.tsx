@@ -20,7 +20,7 @@ const CustomInput = ({
         className={`w-full py-3 rounded-md flex items-center px-3 bg-[#EAF0F7] ${className}`}
         {...props}
       />
-      {error && value && <div className="text-red-900 text-sm">{error}</div>}
+      {error &&  <div className="text-red-900 text-sm">{error}</div>}
     </div>
   );
 };

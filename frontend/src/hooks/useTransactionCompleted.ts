@@ -19,7 +19,7 @@ const useTransactionCompleted = (transaction: Transaction) => {
   useEffect(() => {
     const transactionStatePolling = setInterval(async () => {
       try {
-        if (await isTransactionCompleted(transaction.id)) {
+        if (await isTransactionCompleted(transaction?.orderId?.toString() ?? "0")) {
           setCompleted(true);
         }
       } catch (error) {

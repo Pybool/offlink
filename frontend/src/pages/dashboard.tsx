@@ -1,3 +1,4 @@
+'use client'
 import React, { ReactElement, useState } from 'react'
 import AuthMiddleware from '@/middlewares/auth/AuthMiddleware'
 import Header from '@/components/Header'
@@ -32,7 +33,7 @@ Dashboard.getLayout = function getLayout(page: ReactElement) {
                     {page}
                 </ConnectLayout>
             </AuthMiddleware>
-        </WagmiWrapperLayout>
+     </WagmiWrapperLayout>
     )
 }
 

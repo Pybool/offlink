@@ -1,0 +1,39 @@
+{
+  "name": "Blockchain Innovation Hub Hackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Blockchain Innovation Hub",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "@withvoid/make-validation": "1.0.5",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.9",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.19",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.6",
+    "nodemon": "^2.0.4",
+    "redis": "^3.0.2",
+    "socket.io": "2.3.0",
+    "socket.io-client": "^4.7.2",
+    "truffle-privatekey-provider": "^1.5.0",
+    "uuid": "8.1.0",
+    "web3": "^4.2.1",
+    "ws": "^8.14.2",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "json-loader": "^0.5.7"
+  }
+}

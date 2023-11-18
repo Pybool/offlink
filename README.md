@@ -56,8 +56,6 @@ Follow the steps below to use the solution as a seller
 
 Follow the steps below to use the solution as a buyer
 
-Prior to the steps below request to be added as a buyer on the platform on [https://googleforms.com](https://googleforms.com)
-
 1: Login with your credentials
 
 2: Connect your preferred wallet and fund your wallet with CUSD

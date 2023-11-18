@@ -10,8 +10,6 @@ Offlink provides a decentralized peer-to-peer platform for crypto traders to exc
 
 We understand that most off-ramping solutions for cUSD in Africa are centralized, making it harder for holders to convert their stablecoins with fair exchange rates. This had prompted us to build a solution that was completely decentralized with fair pricing and fast transaction completion time.
 
-
-
 ## Features
 
 At the hackathon, we successfully implemented functionality for users within Nigeria, Ghana, Kenya to offramp on the platform:
@@ -71,4 +69,3 @@ Clone the repository:
 ```bash
 git clone https://github.com/Pybool/offlink.git
 ```
-

@@ -64,8 +64,55 @@ Follow the steps below to use the solution as a buyer
 
 ### Developers
 
-Clone the repository:
+1: Clone the repository:
 
 ```bash
 git clone https://github.com/Pybool/offlink.git
 ```
+### Frontend
+
+Navigate to frontend root folder and install dependencies
+
+```bash
+cd frontend && yarn
+```
+Start development server
+
+```bash
+yarn dev
+```
+
+
+### Backend
+Navigate to backend root folder
+```bash
+cd Backend
+```
+Install dependencies
+```bash
+npm install
+```
+Start development server
+
+```bash
+npm run start
+```
+## Presentation and Live Demo
+
+[Live APP DEMO](https://youtu.be/8py4uZeXU_M)
+
+[Live Presentation](https://youtu.be/ML4JVYPEDNM)
+
+[Presentation Slide on Canva](https://github.com/Pybool/offlink/tree/master/frontend/public/Slides/Offlinkslide.pptx)
+
+
+## Challenges and Lessons During the Hackathon
+During the hackathon, we faced some challenges, which we successfully tackled and learned from. Our first issue faced was with maintaining connection for more than 20 minutes to the Alphajores Testnet Websocket RPC for listening to events on the blockchain. We solved this issue by implementing a retry reconnection mechanism and polling of the blockchain manually.
+
+Another issue faced was was with react wagmi/core was another problem we faced due to broken dependency, after much research it was resolved by installing @wagmi/core@1.4.6, viem@1.19.1, wagmi@1.4.6" packages
+
+## Team Members
+1: Muhdsodiq Bolarinwa
+2: Henry Daniel
+3: Emmanuel Eko
+

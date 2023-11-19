@@ -16,3 +16,11 @@ export type Transaction = { id: string; orderId?: number };
 
 export type Currencies = (typeof SUPPORTED_CURRENCIES)[string];
 
+export type Profile = {
+  firstname: string;
+  surname: string;
+  othername: string;
+  phone: string;
+  bankName: string;
+  bankAccount: string;
+};

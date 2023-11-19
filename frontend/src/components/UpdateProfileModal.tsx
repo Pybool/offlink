@@ -67,7 +67,7 @@ const UpdateProfile = () => {
         {/* Modal */}
         {toggle && (
           <div
-            className="fixed z-40 overflow-y-auto top-0 w-full left-0"
+            className="fixed z-40 overflow-y-scroll top-0 w-full left-0"
             id="modal"
           >
             {/* Form with input fields for the profile, that triggers the function on submit */}

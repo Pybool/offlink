@@ -21,7 +21,7 @@ const useTransactionAccepted = (transaction: Transaction) => {
   useEffect(() => {
     const transactionStatePolling = setInterval(async () => {
       try {
-        if (await isTransactionAccepted(transaction.id)) {
+        if (await isTransactionAccepted(transaction?.orderId?.toString() ?? "0")) {
           setAccepted(true);
         }
       } catch (error) {

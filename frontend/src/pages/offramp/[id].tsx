@@ -15,6 +15,7 @@ import useTransactionRefunded from "@/hooks/useTransactionRefunded";
 import TransactionReleasedWidget from "@/components/TransactionReleasedWidget";
 import TransactionRefundedWidget from "@/components/TransactionRefundedWidget";
 import TransactionCancelledWidget from "@/components/TransactionCancelled";
+import PendingLoading from "@/components/Loader/PandingLoading";
 
 const ConnectLayout = dynamic(() => import("@/layouts/Connect"), {
   ssr: false,
@@ -34,10 +35,13 @@ const OffRamp = () => {
 
     return id;
   }, [param]);
-
+  console.log(parsedID)
   const { transaction } = useGetTransactionByID(parsedID);
+  console.log(transaction)
 
   const { accepted } = useTransactionAccepted(transaction ?? { id: "" });
+
+  
 
   const { completed } = useTransactionCompleted(transaction ?? { id: "" });
 
@@ -51,14 +55,16 @@ const OffRamp = () => {
 
   if (refunded) return <TransactionRefundedWidget />;
 
-  if (cancelled) return <TransactionCancelledWidget />;
+  if (cancelled) return <TransactionCancelledWidget  />;
 
-  if (accepted) return <TransactionAcceptedWidget />;
+  if (accepted) return <TransactionAcceptedWidget id={transaction?.orderId?.toString() ?? ""} />;
 
   if (completed)
-    return <TransactionCompletedWidget id={transaction?.id ?? ""} />;
+    return <TransactionCompletedWidget id={transaction?.orderId?.toString() ?? ""} />;
+  // TODO: orderCancel
+  //  require(order.txStatus == _TransactionState.OPEN,"order is not open");
 
-  return <Preloader />;
+  return <PendingLoading id={transaction?.orderId?.toString() ?? ""} />
 };
 
 OffRamp.getLayout = function getLayout(page: ReactElement) {

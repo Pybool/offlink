@@ -19,7 +19,7 @@ const useTransactionCancelled = (transaction: Transaction) => {
   useEffect(() => {
     const transactionStatePolling = setInterval(async () => {
       try {
-        if (await isTransactionCancelled(transaction.id)) {
+        if (await isTransactionCancelled(transaction?.orderId?.toString() ?? "0")) {
           setCancelled(true);
         }
       } catch (error) {

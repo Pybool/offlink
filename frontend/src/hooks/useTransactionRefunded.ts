@@ -19,7 +19,7 @@ const useTransactionRefunded = (transaction: Transaction) => {
   useEffect(() => {
     const transactionStatePolling = setInterval(async () => {
       try {
-        if (await isTransactionReleased(transaction.id)) {
+        if (await isTransactionReleased(transaction?.orderId?.toString() ?? "0")) {
           setRefunded(true);
         }
       } catch (error) {

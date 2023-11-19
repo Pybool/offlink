@@ -7,7 +7,7 @@ type CancelTransactiondWidgetParams = {
 
 const PendingLoading = ({id}: CancelTransactiondWidgetParams): JSX.Element => {
   return (
-    <section className="h-screen bg-[#8981b1]">
+    <section className="h-screen bg-[#8981b1] text-center">
       <div className="w-full h-full flex items-center justify-center flex-col">
         <LoadingIcon />
       <p className="text-white text-2xl">Transaction pending. Waiting trader to accept transaction</p>

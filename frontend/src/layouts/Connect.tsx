@@ -4,9 +4,17 @@ import Preloader from "@/components/Preloader";
 import { useEffect, type PropsWithChildren } from "react";
 import { InjectedConnector } from 'wagmi/connectors/injected'
 
-interface Window {
-  ethereum?: any;
-}
+
+declare global {
+  interface Window {
+    ethereum?: {
+      isMiniPay?: boolean;
+      request?: (...args: any[]) => Promise<void>;
+      
+    };
+  }
+ }
+ 
 
 const ConnectLayout = ({ children }: PropsWithChildren) => {
   const { isConnecting, isDisconnected } = useAccount();
@@ -17,8 +25,8 @@ const ConnectLayout = ({ children }: PropsWithChildren) => {
 
   useEffect(() => {
     if(!window) return
-    if(!(window as any)?.ethereum) return
-    if(!(window as any)?.ethereum?.isMiniPay) return
+    if(!window?.ethereum) return
+    if(!window?.ethereum?.isMiniPay) return
     connect()
   }, [connect])
 

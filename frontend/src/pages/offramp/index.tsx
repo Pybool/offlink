@@ -53,7 +53,7 @@ const OffRampPage = (): JSX.Element => {
       // Handle the case when tokenAmount is not valid (e.g., set a default value)
       return BigInt(0);
     }
-    return parseEther(tokenAmount?.toString() || "0");
+    return parseEther(tokenAmount?.toString() || "1");
   }, [tokenAmount]);
   console.log(tokenAmountinWei)
 
@@ -79,7 +79,8 @@ const OffRampPage = (): JSX.Element => {
       try {
         await getTokenApproval(OFFRAMP_ADDRESS, tokenAmountinWei.toString());
       } catch (error: any) {
-        setErrorNotification(error?.message);
+        // setErrorNotification(error?.message);
+        // TODOL Toast contract error
         stopLoading();
         return;
       }
@@ -101,9 +102,9 @@ const OffRampPage = (): JSX.Element => {
       });
       setSuccessNotification("order placed successfully");
     } catch (error: any) {
-      setErrorNotification(error?.message);
-      stopLoading();
-      return;
+      // setErrorNotification(error?.message);
+      // stopLoading();
+      // return;
     }
     stopLoading();
     navigate.push(`/offramp/${response?.transactionId}`);

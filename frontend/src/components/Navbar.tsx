@@ -92,6 +92,7 @@ const Navbar = () => {
                             <Link href="/dashboard" className="text-white h-[2rem] flex items-center justify-center text-center">Dashboard</Link>
                             <Link href="/offramp" className="text-white h-[2rem] flex items-center justify-center text-center">Offramp</Link>
                             <Link href="/profile" className="text-white h-[2rem] flex items-center justify-center text-center">Profile</Link>
+                            <button onClick={loginout} className="text-white h-[2rem] flex items-center justify-center text-center">Logout</button>
                         </>
                         ) : (<>
                             <Link href="/register" className="text-white h-[2rem] flex items-center justify-center">Sign Up</Link>

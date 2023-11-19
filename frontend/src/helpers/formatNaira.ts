@@ -13,6 +13,6 @@ export const formatNaira = (num: number | string): string => {
     });
     
   
-    return formatter.format(parsedNum);
+    return formatter.format(Math.trunc(parsedNum));
   };
   

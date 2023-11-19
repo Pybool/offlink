@@ -93,8 +93,22 @@ export const releaseFunds = async (id: string): Promise<any> => {
     console.log(error)
   }
 };
+export const completeOrder = async (id: string): Promise<any> => {
+  try{
+    const result = await writeContract({
+      address: OFFRAMP_ADDRESS,
+      abi: OfflinkABI.abi,
+      functionName: "completeOrder",
+      args: [id],
+    });
+  
+    return result;
+  } catch(error) {
+    console.log(error)
+  }
+};
 
-export const releaseTransaction = async (id: string): Promise<any> => {
+export const cancelSellOrder = async (id: string): Promise<any> => {
   try {
   const result = await writeContract({
     address: OFFRAMP_ADDRESS,

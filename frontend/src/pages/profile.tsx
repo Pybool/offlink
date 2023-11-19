@@ -21,14 +21,6 @@ const Profile = () => {
     useEffect(() => {
       profile()
     }, [])
-// bankAccount
-// bankName
-// email
-// firstname
-// othername
-// phone
-// surname
-
 
     return (
     <div>
@@ -42,7 +34,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-      <div className=" mt-[4rem]">
+      <div className=" mt-[4rem] text-center">
         <div className=" flex justify-center items-center flex-col gap-7">
           <span>
             <h1 className=" text-[48px] font-bold">{data?.surname} {data?.firstname} {data?.othername}</h1>

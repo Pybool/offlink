@@ -92,7 +92,8 @@ Install dependencies
 ```bash
 npm install
 ```
-```Fill In environment variable
+Fill In environment variables
+```
 PORT= 
 REDIS_HOST = 
 MONGODB_URI=
